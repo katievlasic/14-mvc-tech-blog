@@ -1,12 +1,13 @@
 {
   "name": "boilplater",
   "version": "1.0.0",
-  "description": "",
+  "description": "npm install --save express\r npm install --save sequelize\r npm install --save dotenv\r npm install --save mysql2",
   "main": "script.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "scaffold": "node ./script.js",
-    "teardown": "rm -rf ./dist"
+    "teardown": "rm -rf ./dist",
+    "start": "node server.js"
   },
   "author": "Jack Linhart",
   "license": "MIT",
@@ -15,6 +16,17 @@
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "mysql2": "^3.2.0",
+    "path": "^0.12.7",
     "sequelize": "^6.29.3"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/katievlasic/14-mvc-tech-blog.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/katievlasic/14-mvc-tech-blog/issues"
+  },
+  "homepage": "https://github.com/katievlasic/14-mvc-tech-blog#readme"
 }
