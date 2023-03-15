@@ -1,0 +1,28 @@
+:root {
+    --main: white;
+    --back: black;
+    --border-radius: 0.3rem;
+  }
+
+
+body {
+    font-family: Arial;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: var(--back);
+  }
+
+  header {
+    padding: 40px;
+    text-align: center;
+    background: var(--white);
+    color: var(--black);
+  }
+  
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+  }
