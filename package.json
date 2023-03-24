@@ -17,9 +17,9 @@
     "express": "^4.18.2",
     "mysql2": "^3.2.0",
     "path": "^0.12.7",
+    "save": "^2.9.0",
     "sequelize": "^6.29.3"
   },
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/katievlasic/14-mvc-tech-blog.git"
