@@ -25,6 +25,9 @@
 5. Type `npm install --save dotenv`
 6. Type `npm install -- save express`
 7. Type `npm install -- save sequelize`
+7. Type `npm install -- save express-handlebars`
+7. Type `npm install -- save bcrypt`
+7. Type `npm install -- save connect-session-sequelize`
 8. Open the mysql shell using `mysql -u root -p` (enter your password when prompted)
 9. Within mysql shell, type `source db/schema.sql`
 10. Within mysql shell, type `USE employee_db;`
