@@ -11,7 +11,8 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    background-color: var(--back);
+    
+  background-image: linear-gradient(var(--main), var(--back));
   }
 
   header {

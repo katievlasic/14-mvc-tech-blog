@@ -2,7 +2,8 @@
     {
       "firstName": "Katie",
       "lastName": "Vlasic",
-      "login": "handle"
+      "loginEmail": "handle@gmail.com",
+      "password": 123456
     }
   ]
   
