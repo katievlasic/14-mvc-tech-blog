@@ -12,40 +12,40 @@ router.get('/', async (req, res) => {
       ],
     });
     // Serialize data so the template can read it
+    console.log(commentData);
     const comments = commentData.map((comment) => comment.get({ plain: true }));
 
     // Pass serialized data and session flag into template
-    console.log(comments);
     res.render('homepage', { 
-      comments, 
-      logged_in: req.session.logged_in 
+      comments
+      // logged_in: req.session.logged_in 
     });
   } catch (err) {
+    console.log(err);
     res.status(500).json(err);
   }
 });
 
-router.get('/comment/:id', async (req, res) => {
-  try {
-    const commentData = await Comment.findByPk(req.params.id, {
-      include: [
-        {
-          model: User,
-          attributes: ['name'],
-        },
-      ],
-    });
+// router.get('/comment/:id', async (req, res) => {
+//   try {
+//     const commentData = await Comment.findByPk(req.params.id, {
+//       include: [
+//         {
+//           model: User
+//         },
+//       ],
+//     });
 
-    const comment = commentData.get({ plain: true });
+//     const comment = commentData.get({ plain: true });
 
-    res.render('comment', {
-      ...comment,
-      logged_in: req.session.logged_in
-    });
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
+//     res.render('comment', {
+//       ...comment,
+//       logged_in: req.session.logged_in
+//     });
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
 
 // // Use withAuth middleware to prevent access to route
 // router.get('/users', withAuth, async (req, res) => {
@@ -67,14 +67,14 @@ router.get('/comment/:id', async (req, res) => {
 //   }
 // });
 
-// router.get('/login', (req, res) => {
-//   // If the user is already logged in, redirect the request to another route
-//   if (req.session.logged_in) {
-//     res.redirect('/profile');
-//     return;
-//   }
+router.get('/login', (req, res) => {
+  // If the user is already logged in, redirect the request to another route
+  if (req.session.logged_in) {
+    res.redirect('/');
+    return;
+  }
 
-//   res.render('login');
-// });
+  res.render('login');
+});
 
 module.exports = router;

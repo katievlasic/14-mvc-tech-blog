@@ -1,15 +1,17 @@
 <!-- Loop over each object in the projects array -->
-{{#each comments as |comment| }}
 <div>
+{{#each comments as |comment| }}
   <div>
     <h2>
       <!-- Call helper function with triple brackets to render the emoji span as HTML -->
     Comments Uploaded!
     </h2>
   
-    <p> {{comment.id}} Created by {{user.email}}</p>
+    {{!-- <p> {{comment.id}} Created by {{user.loginEmail}}</p> --}}
  
   </div>
 
 </div>
 {{/each}}
+
+<script src="./login"></script>
