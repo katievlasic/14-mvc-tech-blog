@@ -4,6 +4,12 @@
       "lastName": "Vlasic",
       "loginEmail": "handle@gmail.com",
       "password": 123456
+    },
+    {
+      "firstName": "Jane",
+      "lastName": "Doe",
+      "loginEmail": "handle2@gmail.com",
+      "password": 123456
     }
   ]
   

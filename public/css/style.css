@@ -6,8 +6,8 @@
   }
   
 body {
-      margin: 0;
-      background-color: var(--bottom);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
 }
 
 header {
@@ -18,13 +18,10 @@ header {
 }
 
 h1 {
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   letter-spacing: 3px;
-  background-color: blueviolet;
-  color: var(--back)
+  background-color: var(--bottom);
+  color: var(--main)
 }
-
-
 .navbar {
   display: flex;
   flex-direction: column;
@@ -36,5 +33,17 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     flex-grow: 1;
+    justify-content: center;
     background-image: linear-gradient(var(--main), var(--back));
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }

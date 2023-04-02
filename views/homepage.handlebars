@@ -1,17 +1,23 @@
-<!-- Loop over each object in the projects array -->
 <div>
-{{#each comments as |comment| }}
-  <div>
     <h2>
       <!-- Call helper function with triple brackets to render the emoji span as HTML -->
-    Comments Uploaded!
+    Check out the latest topics being discussed:
     </h2>
-  
+  <div>
+{{#each comments as |comment| }}
+    <p>{{comment.text}} - {{comment.id}}</p>
     {{!-- <p> {{comment.id}} Created by {{user.loginEmail}}</p> --}}
  
   </div>
+{{/each}}
+  <div> 
+     <form class="comment-form">
+    <label>Leave a comment:</label>
+    <input id="comment-entry" type="text" />
+       <button class="comment-form" id="begin-entry" type="submit">Save Changes</button>
+     </form>
+  </div>
 
 </div>
-{{/each}}
 
-<script src="./login"></script>
+<script src="./js/comment"></script>
