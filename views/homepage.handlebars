@@ -2,10 +2,13 @@
     <h2>
     Check out the latest topics being discussed:
     </h2>
+    <ul>
+
 {{#each comments as |comment| }}
-    <p>{{comment.text}} - {{comment.user_id}}</p>
-  </div>
+    <li>"{{post.title}}":{{post.text}} and {{comment.text}} - {{comment.user_id}}</li>
+    </ul>
 {{/each}}
+  </div>
   <div> 
      <form class="comment-form">
     <label>Leave a comment:</label>
