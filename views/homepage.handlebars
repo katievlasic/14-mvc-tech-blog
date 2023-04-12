@@ -3,8 +3,8 @@
     Check out the latest topics being discussed:
     </h2>
     <ul>
-      {{#each}}
-    <li>"{{post.title}}":{{post.text}} and {{comment.text}} - {{comment.user_id}}</li>
+      {{#each comments as |comment| }}
+    <li>"{{comment.post.title}}":{{comment.post.text}} and {{comment.text}} - {{comment.user_id}}</li>
     </ul>
     {{/each}}
   </div>
