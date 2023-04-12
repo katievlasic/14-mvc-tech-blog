@@ -3,7 +3,7 @@ const { Comment, User, Post } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
-  console.log(req.session);
+  //console.log(req.session);
   try {
     const commentData = await Comment.findAll({
       include: [
@@ -24,27 +24,6 @@ router.get('/', async (req, res) => {
     res.status(500).json(err);
   }
 });
-
-// router.get('/comment/:id', async (req, res) => {
-//   try {
-//     const commentData = await Comment.findByPk(req.params.id, {
-//       include: [
-//         {
-//           model: User
-//         },
-//       ],
-//     });
-
-//     const comment = commentData.get({ plain: true });
-
-//     res.render('comment', {
-//       ...comment,
-//       logged_in: req.session.logged_in
-//     });
-//   } catch (err) {
-//     res.status(500).json(err);
-//   }
-// });
 
 // Use withAuth middleware to prevent access to route
 router.get('/dashboard', withAuth, async (req, res) => {
