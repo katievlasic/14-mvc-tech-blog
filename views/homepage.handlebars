@@ -3,8 +3,10 @@
     Check out the latest topics being discussed:
     </h2>
     <ul>
+      {{#each}}
     <li>"{{post.title}}":{{post.text}} and {{comment.text}} - {{comment.user_id}}</li>
     </ul>
+    {{/each}}
   </div>
   <div> 
      <form class="comment-form">
