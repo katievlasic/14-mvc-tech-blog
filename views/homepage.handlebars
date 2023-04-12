@@ -1,13 +1,9 @@
 <div>
     <h2>
-      <!-- Call helper function with triple brackets to render the emoji span as HTML -->
     Check out the latest topics being discussed:
     </h2>
-  <div>
 {{#each comments as |comment| }}
-    <p>{{comment.text}} - {{comment.id}}</p>
-    {{!-- <p> {{comment.id}} Created by {{user.loginEmail}}</p> --}}
- 
+    <p>{{comment.text}} - {{comment.user_id}}</p>
   </div>
 {{/each}}
   <div> 
