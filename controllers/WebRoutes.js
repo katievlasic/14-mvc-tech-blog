@@ -5,18 +5,53 @@ const withAuth = require('../utils/auth');
 router.get('/', async (req, res) => {
   //console.log(req.session);
   try {
-    const commentData = await Comment.findAll({
+    const postData = await Post.findAll({
       include: [
         {
-          model: User,
-        },
+          model: User, 
+        }, //post.user
+        {
+          model: Comment,
+          include: [{
+            model:User
+          }]
+        } // post.comment as comment then comment.user
       ],
     });
     // Serialize data so the template can read it
-    const comments = commentData.map((comment) => comment.get({ plain: true }));
+    const posts = postData.map((post) => post.get({ plain: true }));
+    console.log(posts);
     // Pass serialized data and session flag into template
     res.render('homepage', { 
-      comments,
+      posts,
+      // logged_in: req.session.logged_in,
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
+router.get('/post/:id', async (req, res) => {
+  try {
+    const postData = await Post.findByPk(req.params.id, {
+      include: [
+        {
+          model: User, 
+        }, 
+        {
+          model: Comment,
+          include: [{
+            model:User
+          }]
+        }
+      ],
+    });
+    // Serialize data so the template can read it
+    const post = postData.get({ plain: true });
+    // Pass serialized data and session flag into template
+    res.render('post', { 
+      post,
       // logged_in: req.session.logged_in,
     });
   } catch (err) {

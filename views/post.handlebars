@@ -1,0 +1,11 @@
+<div>
+    "single post end point"
+    {{post.title}}
+    {{post.text}}
+    {{post.user.name}}
+    <ul>
+        {{#each post.comments as |comment|}}
+    <li>"{{comment.text}} - {{comment.user.name}}</li>
+        {{/each}}
+      </ul>
+</div>

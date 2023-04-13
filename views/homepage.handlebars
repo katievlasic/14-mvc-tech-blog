@@ -3,8 +3,13 @@
     Check out the latest topics being discussed:
     </h2>
     <ul>
-      {{#each comments as |comment| }}
-    <li>"{{comment.post.title}}":{{comment.post.text}} and {{comment.text}} - {{comment.user_id}}</li>
+      {{#each posts as |post| }}
+      <a href="/post/{{post.id}}">{{post.title}}</a>
+      <ul>
+        {{#each post.comments as |comment|}}
+    <li>"{{comment.text}} - {{comment.user.name}}</li>
+        {{/each}}
+      </ul>
     </ul>
     {{/each}}
   </div>
