@@ -45,3 +45,8 @@ This application is meant to be a platform for users to post about tech.
 
 ## Misc. Notes
 DNS IP url to communicate with domain
+
+
+Remember that the end point /post/id to get an individaul post
+
+withAuth required to create a post (handlebars dashboard -- TODO build out top search bar to look way cooler!!)
