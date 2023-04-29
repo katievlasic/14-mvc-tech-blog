@@ -31,13 +31,14 @@
 8. Open the mysql shell using `mysql -u root -p` (enter your password when prompted)
 9. Within mysql shell, type `source db/schema.sql`
 10. Within mysql shell, type `USE employee_db;`
-11. Leave mysql shell by either typing `exit` or `Ctrl`+`c`
+11. Leave mysql shell by either typing `exit` or Ctrl+`c`
 12. Back in the main bash terminal, type `npm run seeds` to seed the db
 13. Type `node server.js` to begin the application
+14. Access the application locally at "localhost:3001" in a modern web browser
 
 ## Usage
 
-This application is meant to be a platform for users to post about tech.
+This application is meant to be a platform for users to post about tech topics and interact with other users.
 
 ## Contributing
 

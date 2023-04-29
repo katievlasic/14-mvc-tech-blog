@@ -83,7 +83,7 @@ router.get('/dashboard', withAuth, async (req, res) => {
 router.get('/login', (req, res) => {
   try{
     res.render("login", {
-      // logged_in: req.session.logged_in
+      logged_in: req.session.logged_in
     });
   }
  catch (err) {
@@ -93,9 +93,3 @@ router.get('/login', (req, res) => {
 });
 
 module.exports = router;
-
-// If the user is already logged in, redirect the request to another route
-// if (req.session.logged_in) {
-//   res.redirect('/');
-//   return;
-// }
