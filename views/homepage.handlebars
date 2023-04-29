@@ -2,25 +2,15 @@
     <h2>
     Check out the latest topics being discussed:
     </h2>
-    <ul>
+    <ul class="postHome">
       {{#each posts as |post| }}
       <a href="/post/{{post.id}}">{{post.title}}</a>
-      <ul>
         {{#each post.comments as |comment|}}
     <li>"{{comment.text}} - {{comment.user.name}}</li>
         {{/each}}
-      </ul>
-    </ul>
     {{/each}}
+      </ul>
   </div>
-  <div> 
-     <form class="comment-form">
-    <label>Leave a comment:</label>
-    <input id="comment-entry" type="text" />
-       <button class="comment-form" id="begin-entry" type="submit">Save Changes</button>
-     </form>
-  </div>
-
 </div>
 
 <script src="./js/comment.js"></script>

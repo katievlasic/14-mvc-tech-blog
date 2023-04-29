@@ -34,7 +34,7 @@
 11. Leave mysql shell by either typing `exit` or Ctrl+`c`
 12. Back in the main bash terminal, type `npm run seeds` to seed the db
 13. Type `node server.js` to begin the application
-14. Access the application locally at "localhost:3001" in a modern web browser
+14. Access the application locally at "localhost:3001" in a modern web browser after running node server.js.
 
 ## Usage
 

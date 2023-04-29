@@ -1,14 +1,20 @@
-<div>
-    "single post end point"
-    {{post.title}}
-    {{post.text}}
-    {{post.user.name}}
-    <ul>
+<h3>Single Post Page</h3>
+<div class="postpage">
         {{#each post.comments as |comment|}}
+    <ul id="postcontent">
     <li>"{{comment.text}} - {{comment.user.name}}</li>
         {{/each}}
+    <li>Title of post: {{post.title}}</li>
+    <li>Content of post:{{post.text}}</li>
+    <li>Author: {{post.user.name}}</li>
       </ul>
 </div>
+     <form class="comment-form">
+    <label>Leave a comment on this post:</label>
+    <input id="comment-entry" type="text" />
+       <button class="comment-form" id="begin-entry" type="submit">Save Changes</button>
+     </form>
+
 
 
 <script src="./js/comment.js"></script>
