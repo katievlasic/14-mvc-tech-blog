@@ -2,17 +2,16 @@
 
 ## Description
 
-![Preview](in progress)
+The [Tech Talk blog web application](https://tech-blog-mvc-kv.herokuapp.com/) can be used to post comments about tech related content.
 
-[Heroku Deployed URL](https://git.heroku.com/tech-blog-mvc-kv.git)
+![Preview](./public/images/LoginPreview.jpg)
+
 
 ## Table of Contents
 
 - [Installation](#installation)
 
 - [Usage](#usage)
-
-- [Contributing](#contributing)
 
 - [Questions](#questions)
 
@@ -40,14 +39,6 @@
 
 This application is meant to be a platform for users to post about tech topics and interact with other users.
 
-## Contributing
+## Questions
 
-[Katie Vlasic](https://github.com/katievlasic)
-
-## Misc. Notes
-DNS IP url to communicate with domain
-
-
-Remember that the end point /post/id to get an individaul post
-
-withAuth required to create a post (handlebars dashboard -- TODO build out top search bar to look way cooler!!)
+Please contact [Katie Vlasic](https://github.com/katievlasic) with any questions.
